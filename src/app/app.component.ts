@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { SettingsService } from './services/services.index';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,7 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.css']
 })
 export class AppComponent {
-  title = 'adminpro';
+  
+  //lo que declaremos en este constructor se ejecutará su constructor del compnente automaticamente
+  constructor(public _ajustes: SettingsService){}
 }

@@ -9,6 +9,7 @@ import { FormsModule } from '@angular/forms';
 import { IncrementadorComponent } from '../components/incrementador/incrementador.component';
 import { GraficoDonnaComponent } from '../components/grafico-donna/grafico-donna.component';
 import { ChartsModule } from 'ng2-charts';
+import { AccountSettigsComponent } from './account-settigs/account-settigs.component';
 
 @NgModule({
     declarations: [
@@ -17,7 +18,8 @@ import { ChartsModule } from 'ng2-charts';
         Graficas1Component,
         PagesComponent,
         IncrementadorComponent,
-        GraficoDonnaComponent
+        GraficoDonnaComponent,
+        AccountSettigsComponent
     ],
     //los exports se deben de indicar en el caso de que los componentes
     //se utilicen fuera de dichos componentes
