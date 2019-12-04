@@ -10,6 +10,8 @@ import { IncrementadorComponent } from '../components/incrementador/incrementado
 import { GraficoDonnaComponent } from '../components/grafico-donna/grafico-donna.component';
 import { ChartsModule } from 'ng2-charts';
 import { AccountSettigsComponent } from './account-settigs/account-settigs.component';
+import { PromesasComponent } from './promesas/promesas.component';
+import { RxjsComponent } from './rxjs/rxjs.component';
 
 @NgModule({
     declarations: [
@@ -19,7 +21,9 @@ import { AccountSettigsComponent } from './account-settigs/account-settigs.compo
         PagesComponent,
         IncrementadorComponent,
         GraficoDonnaComponent,
-        AccountSettigsComponent
+        AccountSettigsComponent,
+        PromesasComponent,
+        RxjsComponent
     ],
     //los exports se deben de indicar en el caso de que los componentes
     //se utilicen fuera de dichos componentes

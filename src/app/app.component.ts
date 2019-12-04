@@ -10,4 +10,5 @@ export class AppComponent {
   
   //lo que declaremos en este constructor se ejecutará su constructor del compnente automaticamente
   constructor(public _ajustes: SettingsService){}
+
 }
