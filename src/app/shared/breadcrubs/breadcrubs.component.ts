@@ -34,7 +34,7 @@ export class BreadcrubsComponent implements OnInit {
   ngOnInit() {
   }
 
-  getDataRoute(){
+  getDataRoute() {
     return this.router.events
     .pipe(
       //filtra por tipo de eventos y con map obtiene el data de dicho evento
