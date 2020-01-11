@@ -12,6 +12,9 @@ import { ChartsModule } from 'ng2-charts';
 import { AccountSettigsComponent } from './account-settigs/account-settigs.component';
 import { PromesasComponent } from './promesas/promesas.component';
 import { RxjsComponent } from './rxjs/rxjs.component';
+import { PipesModule } from '../pipes/pipes.module';
+import { ProfileComponent } from './profile/profile.component';
+import { CommonModule } from '@angular/common';
 
 @NgModule({
     declarations: [
@@ -23,7 +26,8 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         GraficoDonnaComponent,
         AccountSettigsComponent,
         PromesasComponent,
-        RxjsComponent
+        RxjsComponent,
+        ProfileComponent
     ],
     //los exports se deben de indicar en el caso de que los componentes
     //se utilicen fuera de dichos componentes
@@ -33,10 +37,12 @@ import { RxjsComponent } from './rxjs/rxjs.component';
         Graficas1Component
     ],
     imports: [
+        CommonModule,
         SharedModule,
         PAGES_ROUTES,
         FormsModule,
-        ChartsModule
+        ChartsModule,
+        PipesModule
     ]
 })
 
