@@ -109,10 +109,14 @@ actualizarUsuario(usuario: Usuario){
   return this.http.put(url, usuario)
   .pipe(
     map((response: any) => {
-      let usuarioDB: Usuario = response.usuario;
-      this.guardarStorage(usuarioDB._id, this.token, usuarioDB);
-    
-      swal('Usuario actualizado', usuarioDB.nombre, 'success');
+
+      if(usuario._id == this.usuario._id) {
+        let usuarioDB: Usuario = response.usuario;
+        this.guardarStorage(usuarioDB._id, this.token, usuarioDB);  
+      }
+
+      
+      swal('Usuario actualizado', usuario.nombre, 'success');
       
       return true;
     })
@@ -135,4 +139,32 @@ cambiarImagen(file: File, id: string) {
 
 }
 
+  cargarUsuarios(desde: number = 0) {
+    let url = URL_SERVICES + '/usuario?desde=' + desde;
+  
+    return this.http.get(url);
+  }
+
+  buscarUsuarios(termino: string){
+    let url = URL_SERVICES + '/busqueda/coleccion/usuarios/' + termino;
+
+    return this.http.get(url)
+      .pipe(
+        map((response:any) => {
+          return response.usuarios;
+        })
+      );
+  }
+
+  borrarUsuario(id: string){
+    let url = URL_SERVICES + '/usuario/' + id;
+    url += '?token=' + this.token;
+
+    return this.http.delete(url).pipe(
+        map(response => {
+          swal('Usuario borrado', 'El usuario ha sido eliminado correctamente', 'success');
+          return true;
+        })
+      );
+  }
 }
