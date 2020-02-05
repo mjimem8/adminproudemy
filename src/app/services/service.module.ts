@@ -7,6 +7,7 @@ import { SubirArchivoService } from './subir-archivo/subir-archivo.service';
 import { ModalUploadService } from '../components/modal-upload/modal-upload.service';
 import { HospitalService } from './hospital/hospital.service';
 import { MedicoService } from './medico/medico.service';
+import { AdminGuard } from './guards/admin.guard';
 
 
 @NgModule({
@@ -20,6 +21,7 @@ import { MedicoService } from './medico/medico.service';
     SidebarService,
     SharedService,
     UsuarioService,
+    AdminGuard,
     LoginGuardGuard,
     SubirArchivoService,
     ModalUploadService,

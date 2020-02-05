@@ -64,9 +64,7 @@ function init_plugins() {
             $(".nav-toggler i").addClass("ti-close");
         });
 
-        $(".search-box a, .search-box .app-search .srh-btn").on('click', function() {
-            $(".app-search").toggle(200);
-        });
+        $(".search-box a, .search-box .app-search .srh-btn").on('click', function() {});
         // ============================================================== 
         // Right sidebar options
         // ============================================================== 
