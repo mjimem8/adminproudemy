@@ -7,6 +7,7 @@ import { BreadcrubsComponent } from './breadcrubs/breadcrubs.component';
 import { RouterModule } from '@angular/router';
 import { CommonModule } from '@angular/common';
 import { PipesModule } from '../pipes/pipes.module';
+import { ModalUploadComponent } from '../components/modal-upload/modal-upload.component';
 
 @NgModule({
     //router para utilizar routelink en la vista
@@ -21,12 +22,14 @@ import { PipesModule } from '../pipes/pipes.module';
         HeaderComponent,
         SidebarComponent,
         BreadcrubsComponent,
+        ModalUploadComponent
     ],
     exports: [
         NopagefoundComponent,
         HeaderComponent,
         SidebarComponent,
         BreadcrubsComponent,
+        ModalUploadComponent
     ]
 })
 
